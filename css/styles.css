@@ -1,0 +1,286 @@
+body {
+    margin: initial;
+    font-family: 'Alegreya';
+}
+
+header {
+    width: 80%;
+    margin: auto;
+    font-family: 'Open Sans';
+}
+
+header a:hover, footer a:hover {
+    color: rgb(189, 55, 0);
+}
+
+footer {
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-family: 'Open Sans';
+    padding: 10px;
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+figure {
+    margin: unset;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(189, 55, 0);
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+iframe {
+    border: none;
+    max-width: 100%;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+.videoFigcaption {
+    text-align: center;
+    font-size: smaller;
+    padding-top: 10px;
+}
+
+.figureVideo {
+    width: 60%;
+}
+
+span {
+    font-weight: 700;
+    font-size: larger;
+}
+
+/*Dispositivos grandes*/
+@media (min-width: 450px) {
+    .menuNav ul li {
+        display: inline-block;
+        color: black;
+    }
+
+    .menuNav li::before {
+        content: "";
+        width: 10px;
+        padding-right: 15px;
+    }
+    
+    ul li:first-child::before {
+        padding-left: initial;
+        padding-right: initial;
+    }
+
+    .divFlex div {
+        width: 33.3%;
+    }
+
+    .divFlex div:nth-child(odd) {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    .mars2020 {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
+    }
+
+    .cienciaFiccionContainer {
+        display: grid;
+        grid-template-columns: 0.75fr 2.5fr 0.75fr;
+        gap: 20px;
+    }
+
+    .gridVideos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 10px;
+        text-align: center;
+    }
+}
+
+/*Dispositivos pequeños*/
+@media (max-width: 449px) {
+    .menuNav ul li {
+        display: block;
+        text-align: center;
+        color: black;
+    }
+
+    .divFlex div {
+        width: 100%;
+    }
+
+    .mars2020 {
+        grid-template-columns: 1fr;
+        grid-auto-flow: dense;
+    }
+
+    .menuVertical {
+        padding-top: 15px;
+        font-size: smaller;
+        order: 2;
+        grid-column: 1;
+    }
+
+    .articleMars2020 {
+        order: 1;
+    }
+
+    .mars2020 {
+        display: grid;
+    }
+
+    .cienciaFiccionContainer {
+        gap: 0;
+    }
+
+    .cienciaFiccionContainer div:nth-child(3n){
+        margin-bottom: 20px;
+    }
+
+    .gridVideos {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .gridVideos div{
+        margin-bottom: 20px;
+    }
+}
+
+.smallFont {
+    font-size: smaller;
+}
+
+.content80width {
+    width: 80%;
+    margin: auto;
+}
+
+.section1index {
+    background-color: black;
+    background-image: url("../img/bg-hero-mars.jpg");
+    background-repeat: no-repeat;
+    background-size: 20vh;
+    background-position: right;
+    height: 20vh;
+    color: white;
+    padding: 20px 0 20px 0 ; /*top, right, bottom, left*/
+    width: unset;
+}
+
+.section1index h1, .section1index p {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.menuActive {
+    font-weight: 700;
+    border-bottom: 3px solid;
+}
+
+.menuActiveVertical {
+    font-weight: 700;
+    color: black;
+}
+
+.divFlex {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.divFlex div h3, .divFlex div p {
+    padding: 0 10px;
+}
+
+.divFlex div img, .cienciaFiccionContainer div img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.menuVertical {
+    padding-top: 15px;
+    font-size: smaller;
+}
+
+.menuVertical nav ul li{
+    display: block;
+    font-family: 'Open Sans';
+}
+
+.gridVideos figure {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.gridVideos figcaption {
+    padding: 5%;
+}
+
+.divClearBackground {
+    background-color: rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+figcaption>cite::before {
+    content: "";
+    background-color: rgb(189, 55, 0);
+    width: 20px;
+    height: 4px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.textList {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#sendform {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: unset;
+    padding: 10px;
+}
+
+#sendform:hover {
+    background-color: rgb(189, 55, 0);
+    color: white;
+}
+
+#mail {
+    color: white;
+    background-color: black;
+    border: none; /*top, right, bottom, left*/
+    border-bottom: white 1px solid;
+    width: 20%;
+}
